@@ -112,10 +112,11 @@ internal Coding GetById(int id)
                     tableCmd.CommandText =
                     $@"UPDATE coding SET
                           Date = '{coding.Date}',
-                          Duration = {coding.Duration}'
+                          Duration = '{coding.Duration}'
                        WHERE
                           Id = {coding.Id}
                        ";
+
                     tableCmd.ExecuteNonQuery();
                 }
             }
